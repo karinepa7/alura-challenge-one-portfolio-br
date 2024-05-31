@@ -572,38 +572,48 @@ header {
     display: none;
   }
 
+  .academic__courses__item__img {
+    width: auto; /* Ajusta a largura para o tamanho adequado */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .academic__courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
   .formcontato--esquerda {
     display: none;
   }
-}
 
-.skills__box,
-.hobbies__box {
-  width: 224px;
-  height: 118px;
-}
+  .skills__box,
+  .hobbies__box {
+    width: 224px;
+    height: 118px;
+  }
 
-.skills__line,
-.hobbies__line {
-  display: grid;
-  grid-template-columns: 224px 224px 224px;
-}
+  .skills__line,
+  .hobbies__line {
+    display: grid; /* Retorna ao layout de grade */
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    gap: 16px;
+  }
 
-.formcontato--esquerda,
-.formcontato__text {
-  flex: 1 1 100%;
-}
+  .formcontato--esquerda,
+  .formcontato__text {
+    flex: 1 1 100%;
+  }
 
-.academic__courses {
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-}
+  .academic__courses {
+    flex-direction: column;
+  }
 
-.experiencie__box {
-  flex-direction: column;
+  .experiencie__box {
+    flex-direction: column;
+  }
 }
-
 /*Mobile*/
 @media (max-width: 425px) {
   .img {
@@ -650,8 +660,10 @@ header {
 
   .skills__line,
   .hobbies__line {
-    display: grid;
-    grid-template-columns: 224px 224px 224px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
   }
 
   .academic__courses__item__img img {
